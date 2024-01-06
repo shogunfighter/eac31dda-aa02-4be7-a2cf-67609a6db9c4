@@ -3,15 +3,13 @@
   "version": "1.0.0",
   "description": "\"# eac31dda-aa02-4be7-a2cf-67609a6db9c4\"",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "app": "ts-node index.ts",
+    "app": "ts-node cli.ts",
     "--------------": "",
-    "json-server": "node --experimental-modules server.mjs",
-    "report-diagnostic-student1": "npm run app -- --reportType 1 --studentId 1",
-    "report-progress-student1": "npm run app -- --reportType 2 --studentId 1",
-    "report-feedback-student1": "npm run app -- --reportType 3 --studentId 1"
+    "report-diagnostic-student1": "npm run app -- --reportType 1 --studentId student1",
+    "report-progress-student1": "npm run app -- --reportType 2 --studentId student1",
+    "report-feedback-student1": "npm run app -- --reportType 3 --studentId student1"
   },
   "keywords": [],
   "author": "",
@@ -19,12 +17,13 @@
   "devDependencies": {
     "@types/jest": "^29.5.11",
     "@types/node": "^20.10.6",
+    "@types/node-fetch": "^2.6.10",
     "@types/yargs": "^17.0.32",
     "ts-node": "^10.0.0",
     "typescript": "^4.0.0",
     "yargs": "^17.7.2"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "node-fetch": "^2"
   }
 }

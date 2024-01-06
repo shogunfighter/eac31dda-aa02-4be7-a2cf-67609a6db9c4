@@ -18,13 +18,15 @@
 // }
 
 import yargs from 'yargs';
+import { diagnosticReport } from './src/report';
+// import { diagnosticReport, feedbackReport, progressReport } from './src/report';
 
 async function runCLI() {
     const args = await yargs
         .option('studentId', {
-            describe: 'Student identifier',
+            describe: 'Student identifier', // formatting: (i.e., student1, student2)
             demandOption: true,
-            type: 'number',
+            type: 'string',
         })
         .option('reportType', {
             describe: 'Type of report to generate: (1=diagnostic, 2=progress, 3=feedback)',
@@ -39,17 +41,20 @@ async function runCLI() {
     const reportType = args.reportType;
 
     switch (reportType) {
-        // A diagnostic report which tells the student where they might have areas of weakness
+        // # diagnostic report
         case 1:
-            console.log("1x");
-            break;
-        // A progress report which tells the student how much they have improved over the year
+            console.log(`running diagnosticReport for ${studentId}`);
+            await diagnosticReport(studentId);
+        break;
+        // # progress report
         case 2:
-            console.log("2x");
+            console.log(`running progressReport for ${studentId}`);
+            // await progressReport(studentId);
             break;
-        // A feedback report providing information about where a student went wrong on individual questions and offers hints on how to answer these questions correctly
+        // # feedback report
         case 3:
-            console.log("3x");
+            console.log(`running feedbackReport for ${studentId}`);
+            // await feedbackReport(studentId);
             break;
         default: throw new Error("Unidentified report type, please only use any of the following: (1=diagnostic, 2=progress, 3=feedback)");
     }
