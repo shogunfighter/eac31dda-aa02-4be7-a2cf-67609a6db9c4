@@ -2,7 +2,16 @@ import { TStudentResponse } from "./TStudentResponse";
 
 export type TStudentResponseQuestion = {
     strand: string;
+    stem: string;
     mark: boolean;
+    hint?: string;
+    questionId?: string;
+    
+    input?: string;
+    inputValue?: string;
+
+    answer?: string;
+    answerValue?: string;
 }
 
 export type TStudentResponseSummary = {
@@ -21,14 +30,34 @@ export type TSummary = {
 
 export type TResultStudentQuestionSummary = {
     filteredStudentResponses: TStudentResponse[]; 
-    // processedStudentResponses: TStudentResponseQuestion[][]; 
-    summary: any, 
+    processedStudentResponses: TStudentResponseQuestion[][]; 
+    summary: TSummary[][], 
 }
 
 export type TDiagnosticReportResult = {
     studentName: string;
     assessmentName: string;
     assessmentDate: string | Date;
+    questionCount: number;
+    questionCorrectCount: number;
+    report: string[]
+}
+
+export type TProgressReportResult = {
+    studentName: string;
+    assessmentName: string;
+    assessmentCount: number;
+    assessmentDates: string[] | Date[];
+    questionCount: number;
+    questionCorrectCount: number;
+    report: string[]
+}
+
+export type TFeedbackReportResult = {
+    studentName: string;
+    assessmentName: string;
+    assessmentCount: number;
+    assessmentDates: string[] | Date[];
     questionCount: number;
     questionCorrectCount: number;
     report: string[]

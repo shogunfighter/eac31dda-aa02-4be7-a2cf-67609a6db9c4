@@ -3,12 +3,14 @@
 import express from 'express';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.JSON_SERVER_PORT;
 
 // Define the path to the data folder
 const dataFolderPath = join(__dirname, 'data');

@@ -1,6 +1,5 @@
 // import yargs, { CommandModule } from "yargs";
 // import { generateDiagnostic } from "./cli";
-
 // if they want to separate the cli commands, we need to do like this
 // const diagnosticCommand: CommandModule = {
 //     command: "diagnostic",
@@ -18,8 +17,7 @@
 // }
 
 import yargs from 'yargs';
-import { diagnosticReport } from './src/report';
-// import { diagnosticReport, feedbackReport, progressReport } from './src/report';
+import { diagnosticReport, feedbackReport, progressReport } from './src/report';
 
 async function runCLI() {
     const args = await yargs
@@ -34,28 +32,19 @@ async function runCLI() {
             type: 'number',
         }).argv;
 
-    console.log("studentId:", args.studentId);
-    console.log("reportType:", args.reportType);
+    // console.log("studentId:", args.studentId);
+    // console.log("reportType:", args.reportType);
 
-    const studentId = args.studentId;
-    const reportType = args.reportType;
+    const studentId = args.studentId as string;
+    const reportType = args.reportType as number;
 
     switch (reportType) {
         // # diagnostic report
-        case 1:
-            console.log(`running diagnosticReport for ${studentId}`);
-            await diagnosticReport(studentId);
-        break;
+        case 1: await diagnosticReport(studentId); break;
         // # progress report
-        case 2:
-            console.log(`running progressReport for ${studentId}`);
-            // await progressReport(studentId);
-            break;
+        case 2: await progressReport(studentId); break;
         // # feedback report
-        case 3:
-            console.log(`running feedbackReport for ${studentId}`);
-            // await feedbackReport(studentId);
-            break;
+        case 3: await feedbackReport(studentId); break;
         default: throw new Error("Unidentified report type, please only use any of the following: (1=diagnostic, 2=progress, 3=feedback)");
     }
 }
