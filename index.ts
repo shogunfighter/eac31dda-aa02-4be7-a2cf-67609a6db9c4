@@ -22,12 +22,12 @@ import yargs from 'yargs';
 async function runCLI() {
     const args = await yargs
         .option('studentId', {
-            describe: 'First numeric value',
+            describe: 'Student identifier',
             demandOption: true,
             type: 'number',
         })
         .option('reportType', {
-            describe: 'Second numeric value',
+            describe: 'Type of report to generate: (1=diagnostic, 2=progress, 3=feedback)',
             demandOption: true,
             type: 'number',
         }).argv;
