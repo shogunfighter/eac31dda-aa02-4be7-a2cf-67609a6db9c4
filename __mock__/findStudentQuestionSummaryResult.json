@@ -1,0 +1,638 @@
+{
+    "filteredStudentResponses": [
+        {
+            "id": "studentReponse1",
+            "assessmentId": "assessment1",
+            "assigned": "14/12/2019 10:31:00",
+            "started": "16/12/2019 10:00:00",
+            "completed": "16/12/2019 10:46:00",
+            "student": { "id": "student1", "yearLevel": 3 },
+            "responses": [
+                { "questionId": "numeracy1", "response": "option3" },
+                { "questionId": "numeracy2", "response": "option4" },
+                { "questionId": "numeracy3", "response": "option2" },
+                { "questionId": "numeracy4", "response": "option1" },
+                { "questionId": "numeracy5", "response": "option1" },
+                { "questionId": "numeracy6", "response": "option1" },
+                { "questionId": "numeracy7", "response": "option4" },
+                { "questionId": "numeracy8", "response": "option4" },
+                { "questionId": "numeracy9", "response": "option1" },
+                { "questionId": "numeracy10", "response": "option1" },
+                { "questionId": "numeracy11", "response": "option1" },
+                { "questionId": "numeracy12", "response": "option1" },
+                { "questionId": "numeracy13", "response": "option3" },
+                { "questionId": "numeracy14", "response": "option2" },
+                { "questionId": "numeracy15", "response": "option1" },
+                { "questionId": "numeracy16", "response": "option1" }
+            ],
+            "results": { "rawScore": 6 }
+        },
+        {
+            "id": "studentReponse2",
+            "assessmentId": "assessment1",
+            "assigned": "14/12/2020 10:31:00",
+            "started": "16/12/2020 10:00:00",
+            "completed": "16/12/2020 10:46:00",
+            "student": { "id": "student1", "yearLevel": 4 },
+            "responses": [
+                { "questionId": "numeracy1", "response": "option3" },
+                { "questionId": "numeracy2", "response": "option4" },
+                { "questionId": "numeracy3", "response": "option2" },
+                { "questionId": "numeracy4", "response": "option2" },
+                { "questionId": "numeracy5", "response": "option1" },
+                { "questionId": "numeracy6", "response": "option3" },
+                { "questionId": "numeracy7", "response": "option4" },
+                { "questionId": "numeracy8", "response": "option4" },
+                { "questionId": "numeracy9", "response": "option2" },
+                { "questionId": "numeracy10", "response": "option1" },
+                { "questionId": "numeracy11", "response": "option1" },
+                { "questionId": "numeracy12", "response": "option1" },
+                { "questionId": "numeracy13", "response": "option3" },
+                { "questionId": "numeracy14", "response": "option1" },
+                { "questionId": "numeracy15", "response": "option1" },
+                { "questionId": "numeracy16", "response": "option1" }
+            ],
+            "results": { "rawScore": 10 }
+        },
+        {
+            "id": "studentReponse3",
+            "assessmentId": "assessment1",
+            "assigned": "14/12/2021 10:31:00",
+            "started": "16/12/2021 10:00:00",
+            "completed": "16/12/2021 10:46:00",
+            "student": { "id": "student1", "yearLevel": 5 },
+            "responses": [
+                { "questionId": "numeracy1", "response": "option3" },
+                { "questionId": "numeracy2", "response": "option4" },
+                { "questionId": "numeracy3", "response": "option2" },
+                { "questionId": "numeracy4", "response": "option2" },
+                { "questionId": "numeracy5", "response": "option3" },
+                { "questionId": "numeracy6", "response": "option3" },
+                { "questionId": "numeracy7", "response": "option4" },
+                { "questionId": "numeracy8", "response": "option4" },
+                { "questionId": "numeracy9", "response": "option2" },
+                { "questionId": "numeracy10", "response": "option2" },
+                { "questionId": "numeracy11", "response": "option2" },
+                { "questionId": "numeracy12", "response": "option2" },
+                { "questionId": "numeracy13", "response": "option3" },
+                { "questionId": "numeracy14", "response": "option1" },
+                { "questionId": "numeracy15", "response": "option2" },
+                { "questionId": "numeracy16", "response": "option1" }
+            ],
+            "results": { "rawScore": 15 }
+        }
+    ],
+    "processedStudentResponses": [
+        [
+            {
+                "questionId": "numeracy1",
+                "strand": "Number and Algebra",
+                "stem": "What is the value of 2 + 3 x 5?",
+                "mark": true,
+                "hint": "Work out the multiplication sign BEFORE the addition sign",
+                "input": "C",
+                "inputValue": "17",
+                "answer": "C",
+                "answerValue": "17"
+            },
+            {
+                "questionId": "numeracy2",
+                "strand": "Number and Algebra",
+                "stem": "The word 'prime' is an abbreviation for what?",
+                "mark": true,
+                "hint": "Prime is a word in its own right",
+                "input": "D",
+                "inputValue": "It is not an abbreviation",
+                "answer": "D",
+                "answerValue": "It is not an abbreviation"
+            },
+            {
+                "questionId": "numeracy3",
+                "strand": "Number and Algebra",
+                "stem": "Is the number 1 a prime number?",
+                "mark": true,
+                "hint": "The number 1 has only one factor - itself. Remember the rule, a prime number has TWO factors itself AND 1",
+                "input": "B",
+                "inputValue": "No",
+                "answer": "B",
+                "answerValue": "No"
+            },
+            {
+                "questionId": "numeracy4",
+                "strand": "Number and Algebra",
+                "stem": "Which of these numbers is a prime number?",
+                "mark": false,
+                "hint": "All the incorrect answers have three or more factors",
+                "input": "A",
+                "inputValue": "4",
+                "answer": "B",
+                "answerValue": "7"
+            },
+            {
+                "questionId": "numeracy5",
+                "strand": "Number and Algebra",
+                "stem": "What is the correct sequence for mathematical operations?",
+                "mark": false,
+                "hint": "They don't call it BODMAS for nothing!",
+                "input": "A",
+                "inputValue": "Addition, Brackets, Division, Order, Multiplication, Subtraction",
+                "answer": "C",
+                "answerValue": "Brackets, Order, Division, Multiplication, Addition, Subtraction"
+            },
+            {
+                "questionId": "numeracy6",
+                "strand": "Measurement and Geometry",
+                "stem": "Which of these statements is true?",
+                "mark": false,
+                "hint": "1 mile is more than 1.5 km but less than 2 km",
+                "input": "A",
+                "inputValue": "1 mile > 2 km",
+                "answer": "C",
+                "answerValue": "1 mile > 1.5 km"
+            },
+            {
+                "questionId": "numeracy7",
+                "strand": "Measurement and Geometry",
+                "stem": "Which unit is best to measure the volume of water in a swimming pool?",
+                "mark": true,
+                "hint": "There may be 1,000s of litres of water in a swimming pool",
+                "input": "D",
+                "inputValue": "litre",
+                "answer": "D",
+                "answerValue": "litre"
+            },
+            {
+                "questionId": "numeracy8",
+                "strand": "Measurement and Geometry",
+                "stem": "How many grams are equivalent to one hundredth of a kg?",
+                "mark": true,
+                "hint": "There are 1,000g in a kg so 1,000 ÷ 100 = 10",
+                "input": "D",
+                "inputValue": "10g",
+                "answer": "D",
+                "answerValue": "10g"
+            },
+            {
+                "questionId": "numeracy9",
+                "strand": "Measurement and Geometry",
+                "stem": "What is 156cm to the nearest metre?",
+                "mark": false,
+                "hint": "As there are 100 cm in a m, this is the same as rounding to the nearest hundred",
+                "input": "A",
+                "inputValue": "1m",
+                "answer": "B",
+                "answerValue": "2m"
+            },
+            {
+                "questionId": "numeracy10",
+                "strand": "Measurement and Geometry",
+                "stem": "What is three quarters of 1 metre in cm?",
+                "mark": false,
+                "hint": "Three quarters of 100 is 75",
+                "input": "A",
+                "inputValue": "0.75cm",
+                "answer": "B",
+                "answerValue": "75cm"
+            },
+            {
+                "questionId": "numeracy11",
+                "strand": "Measurement and Geometry",
+                "stem": "How do we write 4,520ml in litres?",
+                "mark": false,
+                "hint": "To convert millilitres to litres, divide by 1,000",
+                "input": "A",
+                "inputValue": "0.452 l",
+                "answer": "B",
+                "answerValue": "4.52 l"
+            },
+            {
+                "questionId": "numeracy12",
+                "strand": "Measurement and Geometry",
+                "stem": "Roughly how many litres in 1 gallon?",
+                "mark": false,
+                "hint": "A gallon is slightly less than 5 litres",
+                "input": "A",
+                "inputValue": "4 litres",
+                "answer": "B",
+                "answerValue": "5 litres"
+            },
+            {
+                "questionId": "numeracy13",
+                "strand": "Statistics and Probability",
+                "stem": "THe probability of an event occurring is 0.35. What is the probability of it not occurring?",
+                "mark": true,
+                "hint": "A single event either occurs or does not occur, and so the total of their probabilities must equal 1",
+                "input": "C",
+                "inputValue": "0.65",
+                "answer": "C",
+                "answerValue": "0.65"
+            },
+            {
+                "questionId": "numeracy14",
+                "strand": "Statistics and Probability",
+                "stem": "What is the mean of the following group of numbers 8, 3, 5, 12, 10?",
+                "mark": false,
+                "hint": "You must first add all the numbers together and then divide this sum by 5",
+                "input": "B",
+                "inputValue": "30",
+                "answer": "A",
+                "answerValue": "7.6"
+            },
+            {
+                "questionId": "numeracy15",
+                "strand": "Statistics and Probability",
+                "stem": "What is the 'mode' of the following group of numbers 1, 2, 3, 4, 5, 6, 7?",
+                "mark": false,
+                "hint": "The 'mode' is defined as the value that occurs most frequently in a given group of numbers: that is why there is no mode in this group",
+                "input": "A",
+                "inputValue": "4",
+                "answer": "B",
+                "answerValue": "There is no mode"
+            },
+            {
+                "questionId": "numeracy16",
+                "strand": "Statistics and Probability",
+                "stem": "What is the 'median' of the following group of numbers 5, 21, 7, 18, 9?",
+                "mark": false,
+                "hint": "You must first arrange the numbers in ascending order. The median is the middle term, which in this case is 9",
+                "input": "A",
+                "inputValue": "7",
+                "answer": "B",
+                "answerValue": "9"
+            }
+        ],
+        [
+            {
+                "questionId": "numeracy1",
+                "strand": "Number and Algebra",
+                "stem": "What is the value of 2 + 3 x 5?",
+                "mark": true,
+                "hint": "Work out the multiplication sign BEFORE the addition sign",
+                "input": "C",
+                "inputValue": "17",
+                "answer": "C",
+                "answerValue": "17"
+            },
+            {
+                "questionId": "numeracy2",
+                "strand": "Number and Algebra",
+                "stem": "The word 'prime' is an abbreviation for what?",
+                "mark": true,
+                "hint": "Prime is a word in its own right",
+                "input": "D",
+                "inputValue": "It is not an abbreviation",
+                "answer": "D",
+                "answerValue": "It is not an abbreviation"
+            },
+            {
+                "questionId": "numeracy3",
+                "strand": "Number and Algebra",
+                "stem": "Is the number 1 a prime number?",
+                "mark": true,
+                "hint": "The number 1 has only one factor - itself. Remember the rule, a prime number has TWO factors itself AND 1",
+                "input": "B",
+                "inputValue": "No",
+                "answer": "B",
+                "answerValue": "No"
+            },
+            {
+                "questionId": "numeracy4",
+                "strand": "Number and Algebra",
+                "stem": "Which of these numbers is a prime number?",
+                "mark": true,
+                "hint": "All the incorrect answers have three or more factors",
+                "input": "B",
+                "inputValue": "7",
+                "answer": "B",
+                "answerValue": "7"
+            },
+            {
+                "questionId": "numeracy5",
+                "strand": "Number and Algebra",
+                "stem": "What is the correct sequence for mathematical operations?",
+                "mark": false,
+                "hint": "They don't call it BODMAS for nothing!",
+                "input": "A",
+                "inputValue": "Addition, Brackets, Division, Order, Multiplication, Subtraction",
+                "answer": "C",
+                "answerValue": "Brackets, Order, Division, Multiplication, Addition, Subtraction"
+            },
+            {
+                "questionId": "numeracy6",
+                "strand": "Measurement and Geometry",
+                "stem": "Which of these statements is true?",
+                "mark": true,
+                "hint": "1 mile is more than 1.5 km but less than 2 km",
+                "input": "C",
+                "inputValue": "1 mile > 1.5 km",
+                "answer": "C",
+                "answerValue": "1 mile > 1.5 km"
+            },
+            {
+                "questionId": "numeracy7",
+                "strand": "Measurement and Geometry",
+                "stem": "Which unit is best to measure the volume of water in a swimming pool?",
+                "mark": true,
+                "hint": "There may be 1,000s of litres of water in a swimming pool",
+                "input": "D",
+                "inputValue": "litre",
+                "answer": "D",
+                "answerValue": "litre"
+            },
+            {
+                "questionId": "numeracy8",
+                "strand": "Measurement and Geometry",
+                "stem": "How many grams are equivalent to one hundredth of a kg?",
+                "mark": true,
+                "hint": "There are 1,000g in a kg so 1,000 ÷ 100 = 10",
+                "input": "D",
+                "inputValue": "10g",
+                "answer": "D",
+                "answerValue": "10g"
+            },
+            {
+                "questionId": "numeracy9",
+                "strand": "Measurement and Geometry",
+                "stem": "What is 156cm to the nearest metre?",
+                "mark": true,
+                "hint": "As there are 100 cm in a m, this is the same as rounding to the nearest hundred",
+                "input": "B",
+                "inputValue": "2m",
+                "answer": "B",
+                "answerValue": "2m"
+            },
+            {
+                "questionId": "numeracy10",
+                "strand": "Measurement and Geometry",
+                "stem": "What is three quarters of 1 metre in cm?",
+                "mark": false,
+                "hint": "Three quarters of 100 is 75",
+                "input": "A",
+                "inputValue": "0.75cm",
+                "answer": "B",
+                "answerValue": "75cm"
+            },
+            {
+                "questionId": "numeracy11",
+                "strand": "Measurement and Geometry",
+                "stem": "How do we write 4,520ml in litres?",
+                "mark": false,
+                "hint": "To convert millilitres to litres, divide by 1,000",
+                "input": "A",
+                "inputValue": "0.452 l",
+                "answer": "B",
+                "answerValue": "4.52 l"
+            },
+            {
+                "questionId": "numeracy12",
+                "strand": "Measurement and Geometry",
+                "stem": "Roughly how many litres in 1 gallon?",
+                "mark": false,
+                "hint": "A gallon is slightly less than 5 litres",
+                "input": "A",
+                "inputValue": "4 litres",
+                "answer": "B",
+                "answerValue": "5 litres"
+            },
+            {
+                "questionId": "numeracy13",
+                "strand": "Statistics and Probability",
+                "stem": "THe probability of an event occurring is 0.35. What is the probability of it not occurring?",
+                "mark": true,
+                "hint": "A single event either occurs or does not occur, and so the total of their probabilities must equal 1",
+                "input": "C",
+                "inputValue": "0.65",
+                "answer": "C",
+                "answerValue": "0.65"
+            },
+            {
+                "questionId": "numeracy14",
+                "strand": "Statistics and Probability",
+                "stem": "What is the mean of the following group of numbers 8, 3, 5, 12, 10?",
+                "mark": true,
+                "hint": "You must first add all the numbers together and then divide this sum by 5",
+                "input": "A",
+                "inputValue": "7.6",
+                "answer": "A",
+                "answerValue": "7.6"
+            },
+            {
+                "questionId": "numeracy15",
+                "strand": "Statistics and Probability",
+                "stem": "What is the 'mode' of the following group of numbers 1, 2, 3, 4, 5, 6, 7?",
+                "mark": false,
+                "hint": "The 'mode' is defined as the value that occurs most frequently in a given group of numbers: that is why there is no mode in this group",
+                "input": "A",
+                "inputValue": "4",
+                "answer": "B",
+                "answerValue": "There is no mode"
+            },
+            {
+                "questionId": "numeracy16",
+                "strand": "Statistics and Probability",
+                "stem": "What is the 'median' of the following group of numbers 5, 21, 7, 18, 9?",
+                "mark": false,
+                "hint": "You must first arrange the numbers in ascending order. The median is the middle term, which in this case is 9",
+                "input": "A",
+                "inputValue": "7",
+                "answer": "B",
+                "answerValue": "9"
+            }
+        ],
+        [
+            {
+                "questionId": "numeracy1",
+                "strand": "Number and Algebra",
+                "stem": "What is the value of 2 + 3 x 5?",
+                "mark": true,
+                "hint": "Work out the multiplication sign BEFORE the addition sign",
+                "input": "C",
+                "inputValue": "17",
+                "answer": "C",
+                "answerValue": "17"
+            },
+            {
+                "questionId": "numeracy2",
+                "strand": "Number and Algebra",
+                "stem": "The word 'prime' is an abbreviation for what?",
+                "mark": true,
+                "hint": "Prime is a word in its own right",
+                "input": "D",
+                "inputValue": "It is not an abbreviation",
+                "answer": "D",
+                "answerValue": "It is not an abbreviation"
+            },
+            {
+                "questionId": "numeracy3",
+                "strand": "Number and Algebra",
+                "stem": "Is the number 1 a prime number?",
+                "mark": true,
+                "hint": "The number 1 has only one factor - itself. Remember the rule, a prime number has TWO factors itself AND 1",
+                "input": "B",
+                "inputValue": "No",
+                "answer": "B",
+                "answerValue": "No"
+            },
+            {
+                "questionId": "numeracy4",
+                "strand": "Number and Algebra",
+                "stem": "Which of these numbers is a prime number?",
+                "mark": true,
+                "hint": "All the incorrect answers have three or more factors",
+                "input": "B",
+                "inputValue": "7",
+                "answer": "B",
+                "answerValue": "7"
+            },
+            {
+                "questionId": "numeracy5",
+                "strand": "Number and Algebra",
+                "stem": "What is the correct sequence for mathematical operations?",
+                "mark": true,
+                "hint": "They don't call it BODMAS for nothing!",
+                "input": "C",
+                "inputValue": "Brackets, Order, Division, Multiplication, Addition, Subtraction",
+                "answer": "C",
+                "answerValue": "Brackets, Order, Division, Multiplication, Addition, Subtraction"
+            },
+            {
+                "questionId": "numeracy6",
+                "strand": "Measurement and Geometry",
+                "stem": "Which of these statements is true?",
+                "mark": true,
+                "hint": "1 mile is more than 1.5 km but less than 2 km",
+                "input": "C",
+                "inputValue": "1 mile > 1.5 km",
+                "answer": "C",
+                "answerValue": "1 mile > 1.5 km"
+            },
+            {
+                "questionId": "numeracy7",
+                "strand": "Measurement and Geometry",
+                "stem": "Which unit is best to measure the volume of water in a swimming pool?",
+                "mark": true,
+                "hint": "There may be 1,000s of litres of water in a swimming pool",
+                "input": "D",
+                "inputValue": "litre",
+                "answer": "D",
+                "answerValue": "litre"
+            },
+            {
+                "questionId": "numeracy8",
+                "strand": "Measurement and Geometry",
+                "stem": "How many grams are equivalent to one hundredth of a kg?",
+                "mark": true,
+                "hint": "There are 1,000g in a kg so 1,000 ÷ 100 = 10",
+                "input": "D",
+                "inputValue": "10g",
+                "answer": "D",
+                "answerValue": "10g"
+            },
+            {
+                "questionId": "numeracy9",
+                "strand": "Measurement and Geometry",
+                "stem": "What is 156cm to the nearest metre?",
+                "mark": true,
+                "hint": "As there are 100 cm in a m, this is the same as rounding to the nearest hundred",
+                "input": "B",
+                "inputValue": "2m",
+                "answer": "B",
+                "answerValue": "2m"
+            },
+            {
+                "questionId": "numeracy10",
+                "strand": "Measurement and Geometry",
+                "stem": "What is three quarters of 1 metre in cm?",
+                "mark": true,
+                "hint": "Three quarters of 100 is 75",
+                "input": "B",
+                "inputValue": "75cm",
+                "answer": "B",
+                "answerValue": "75cm"
+            },
+            {
+                "questionId": "numeracy11",
+                "strand": "Measurement and Geometry",
+                "stem": "How do we write 4,520ml in litres?",
+                "mark": true,
+                "hint": "To convert millilitres to litres, divide by 1,000",
+                "input": "B",
+                "inputValue": "4.52 l",
+                "answer": "B",
+                "answerValue": "4.52 l"
+            },
+            {
+                "questionId": "numeracy12",
+                "strand": "Measurement and Geometry",
+                "stem": "Roughly how many litres in 1 gallon?",
+                "mark": true,
+                "hint": "A gallon is slightly less than 5 litres",
+                "input": "B",
+                "inputValue": "5 litres",
+                "answer": "B",
+                "answerValue": "5 litres"
+            },
+            {
+                "questionId": "numeracy13",
+                "strand": "Statistics and Probability",
+                "stem": "THe probability of an event occurring is 0.35. What is the probability of it not occurring?",
+                "mark": true,
+                "hint": "A single event either occurs or does not occur, and so the total of their probabilities must equal 1",
+                "input": "C",
+                "inputValue": "0.65",
+                "answer": "C",
+                "answerValue": "0.65"
+            },
+            {
+                "questionId": "numeracy14",
+                "strand": "Statistics and Probability",
+                "stem": "What is the mean of the following group of numbers 8, 3, 5, 12, 10?",
+                "mark": true,
+                "hint": "You must first add all the numbers together and then divide this sum by 5",
+                "input": "A",
+                "inputValue": "7.6",
+                "answer": "A",
+                "answerValue": "7.6"
+            },
+            {
+                "questionId": "numeracy15",
+                "strand": "Statistics and Probability",
+                "stem": "What is the 'mode' of the following group of numbers 1, 2, 3, 4, 5, 6, 7?",
+                "mark": true,
+                "hint": "The 'mode' is defined as the value that occurs most frequently in a given group of numbers: that is why there is no mode in this group",
+                "input": "B",
+                "inputValue": "There is no mode",
+                "answer": "B",
+                "answerValue": "There is no mode"
+            },
+            {
+                "questionId": "numeracy16",
+                "strand": "Statistics and Probability",
+                "stem": "What is the 'median' of the following group of numbers 5, 21, 7, 18, 9?",
+                "mark": false,
+                "hint": "You must first arrange the numbers in ascending order. The median is the middle term, which in this case is 9",
+                "input": "A",
+                "inputValue": "7",
+                "answer": "B",
+                "answerValue": "9"
+            }
+        ]
+    ],
+    "summary": [
+        [
+            { "strand": "Number and Algebra", "count": 5, "correct": 3, "wrong": 2 },
+            { "strand": "Measurement and Geometry", "count": 7, "correct": 2, "wrong": 5 },
+            { "strand": "Statistics and Probability", "count": 4, "correct": 1, "wrong": 3 }
+        ],
+        [
+            { "strand": "Number and Algebra", "count": 5, "correct": 4, "wrong": 1 },
+            { "strand": "Measurement and Geometry", "count": 7, "correct": 4, "wrong": 3 },
+            { "strand": "Statistics and Probability", "count": 4, "correct": 2, "wrong": 2 }
+        ],
+        [
+            { "strand": "Number and Algebra", "count": 5, "correct": 5, "wrong": 0 },
+            { "strand": "Measurement and Geometry", "count": 7, "correct": 7, "wrong": 0 },
+            { "strand": "Statistics and Probability", "count": 4, "correct": 3, "wrong": 1 }
+        ]
+    ]
+}

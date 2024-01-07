@@ -1,3 +1,15 @@
+### Instructions
+```
+// install node_modules packages
+$ npm i
+
+// serve static json files - make sure to run the json server to run the application
+$ npm run json-server
+
+// run tests
+$ npm run test
+```
+
 ### Run static JSON server
 ```
 $ npm run json-server
@@ -10,7 +22,7 @@ $ npm run report-progress-student1
 $ npm run report-feedback-student1
 ```
 
-### Example run
+### Example standalone run (change target `studentId`)
 ```
 // run diagnostic for studentId(student1)
 $ npm run app -- --reportType 1 --studentId student1

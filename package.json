@@ -4,6 +4,7 @@
   "description": "\"# eac31dda-aa02-4be7-a2cf-67609a6db9c4\"",
   "main": "index.js",
   "scripts": {
+    "test": "jest",
     "app": "ts-node cli.ts",
     "--------------": "",
     "report-diagnostic-student1": "npm run app -- --reportType 1 --studentId student1",
@@ -18,6 +19,8 @@
     "@types/node": "^20.10.6",
     "@types/node-fetch": "^2.6.10",
     "@types/yargs": "^17.0.32",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
     "ts-node": "^10.0.0",
     "typescript": "^4.0.0",
     "yargs": "^17.7.2"
