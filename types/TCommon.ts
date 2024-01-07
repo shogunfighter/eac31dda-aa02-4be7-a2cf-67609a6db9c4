@@ -34,31 +34,21 @@ export type TResultStudentQuestionSummary = {
     summary: TSummary[][], 
 }
 
-export type TDiagnosticReportResult = {
+type TReport = {
     studentName: string;
-    assessmentName: string;
+    report: string[];
+}
+
+export type TDiagnosticReportResult = TReport & {
     assessmentDate: string | Date;
     questionCount: number;
     questionCorrectCount: number;
-    report: string[]
 }
 
-export type TProgressReportResult = {
-    studentName: string;
-    assessmentName: string;
-    assessmentCount: number;
+export type TProgressReportResult = TReport & {
     assessmentDates: string[] | Date[];
     questionCount: number;
     questionCorrectCount: number;
-    report: string[]
 }
 
-export type TFeedbackReportResult = {
-    studentName: string;
-    assessmentName: string;
-    assessmentCount: number;
-    assessmentDates: string[] | Date[];
-    questionCount: number;
-    questionCorrectCount: number;
-    report: string[]
-}
+export type TFeedbackReportResult = TReport;

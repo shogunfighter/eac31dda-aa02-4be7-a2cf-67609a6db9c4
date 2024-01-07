@@ -11,31 +11,25 @@ dotenv.config();
 const urlPath = `http://localhost:${process.env.JSON_SERVER_PORT}/data`;
 
 /**
- * 
+ * Find the student record using `studentId`
  * @param {string} studentId 
  * @returns {Promise<TStudent | null>}
  */
-const findStudent = async (studentId: string): Promise<TStudent | null> => {
-    try {
-        const url = urlPath + "/students.json";
+export async function findStudent(studentId: string): Promise<TStudent | undefined> {
+    console.log("studentId:",studentId);
+    const response = await fetch(urlPath + "/students.json");
+    if (!response.ok) throw new Error(`Encountered error while fetching student with id: ${studentId}`);
+    const result: TStudent[] = await response.json();
 
-        const response = await fetch(url);
-        if (!response.ok) throw new Error(`Encountered error while fetching student with id: ${studentId}`);
-
-        const result: TStudent[] = await response.json();
-        return result.find((student) => student.id === studentId) || null;
-    }
-    catch (error) {
-        throw new Error("An error was encountered (findStudent)");
-    }
+    return result.find((student) => student.id === studentId);
 }
 
 /**
- * 
+ * Find the question summary assocated with the student record
  * @param {string} studentId 
  * @returns {Promise<TResultStudentQuestionSummary>}
  */
-async function findStudentQuestionSummary(studentId: string): Promise<TResultStudentQuestionSummary> {
+export async function findStudentQuestionSummary(studentId: string): Promise<TResultStudentQuestionSummary> {
 	try {
         const result: TResultStudentQuestionSummary = {
             filteredStudentResponses: [],
@@ -49,7 +43,7 @@ async function findStudentQuestionSummary(studentId: string): Promise<TResultStu
             fetch(questionUrl),
             fetch(studentResponsesUrl)
         ]);
-    
+        
         if (!questionFetchResponse.ok) throw new Error(`Encountered error while fetching questions`);
         if (!studentResponsesFetchResponse.ok) throw new Error(`Encountered error while fetching student reponses`);
     
@@ -66,7 +60,6 @@ async function findStudentQuestionSummary(studentId: string): Promise<TResultStu
             .map(item => item.responses.map(entry => {
                 const qItem = questions.find(q => q.id === entry.questionId);
                 if (qItem) {
-
                     const { options, key, hint } = qItem?.config;
                     const questionOption = options.find(item => item.id === key);
                     const inputOption = options.find(item => item.id === entry.response);
@@ -130,14 +123,13 @@ async function findStudentQuestionSummary(studentId: string): Promise<TResultStu
 }
 
 /**
- * 
+ * Run student report (diagnostic)
  * @param {string} studentId 
  */
 export async function diagnosticReport(studentId: string): Promise<TDiagnosticReportResult> {
     try {
         let result: TDiagnosticReportResult = {
             studentName: '',
-            assessmentName: '',
             assessmentDate: '',
             questionCount: 0,
             questionCorrectCount: 0,
@@ -172,11 +164,10 @@ export async function diagnosticReport(studentId: string): Promise<TDiagnosticRe
             summary[tId].map(summaryItem => {
                 result.report.push(`${summaryItem.strand}: ${summaryItem.correct} out of ${summaryItem.count} correct`);
             });
-    
-            result.report.push("\n");
         }
     
         console.log(result.report.join("\n"));
+        // console.log("XXXXXXXXXXXXX result:", JSON.stringify(result, null, 2));
         return result;
     }
     catch (error) {
@@ -184,12 +175,15 @@ export async function diagnosticReport(studentId: string): Promise<TDiagnosticRe
     }
 }
 
+/**
+ * Run student report (progress)
+ * @param studentId 
+ * @returns 
+ */
 export async function progressReport(studentId: string): Promise<TProgressReportResult> {
     try {
         let result: TProgressReportResult = {
             studentName: '',
-            assessmentCount: 0,
-            assessmentName: '',
             assessmentDates: [],
             questionCount: 0,
             questionCorrectCount: 0,
@@ -238,6 +232,7 @@ export async function progressReport(studentId: string): Promise<TProgressReport
         }
     
         console.log(result.report.join("\n"));
+        // console.log("XXXXXXXXXXXXX result:", JSON.stringify(result, null, 2));
         return result;
     }
     catch (error) {
@@ -245,15 +240,15 @@ export async function progressReport(studentId: string): Promise<TProgressReport
     }
 }
 
+/**
+ * Run student report (feedback)
+ * @param studentId 
+ * @returns 
+ */
 export async function feedbackReport(studentId: string): Promise<TFeedbackReportResult> {
     try {
         let result: TFeedbackReportResult = {
             studentName: '',
-            assessmentCount: 0,
-            assessmentName: '',
-            assessmentDates: [],
-            questionCount: 0,
-            questionCorrectCount: 0,
             report: []
         };
     
@@ -271,17 +266,6 @@ export async function feedbackReport(studentId: string): Promise<TFeedbackReport
     
         // todo: question count - replace it?
         result.report.push(`${result.studentName} got ${tItemLatestDate.results.rawScore} questions right out of ${tItemLatestDate.responses.length}. Feedback for wrong answers given below`); // Assumption: I changed the text - "He" with the real name 
-    
-        // console.log("XXXXXXXXXXXXXXXXXX tItemLatestDate:", JSON.stringify(tItemLatestDate, null, 2));
-        // console.log("XXXXXXXXXXXXXXXXXX filteredStudentResponses:", JSON.stringify(filteredStudentResponses, null, 2));
-        // console.log("XXXXXXXXXXXXXXXXXX filteredStudentResponses processedStudentResponses[tIdLatestDate]:", JSON.stringify(processedStudentResponses[tIdLatestDate], null, 2));
-    
-        // strand: qItem.strand,
-        // stem: qItem.stem,
-        // input: entry.response,
-        // answer: questions.find(item => item.id === entry.questionId),
-        // mark: qItem.config.key === entry.response,
-        // hint: qItem.config.hint
 
         processedStudentResponses[tIdLatestDate]
             .filter(item => item.mark === false)
@@ -293,16 +277,8 @@ export async function feedbackReport(studentId: string): Promise<TFeedbackReport
             })
     
         console.log(result.report.join("\n"));
+        // console.log("XXXXXXXXXXXXX result:", JSON.stringify(result, null, 2));
         return result;
-    
-        // # template
-        // Tony Stark recently completed Numeracy assessment on 16th December 2021 10:46 AM
-        // He got 15 questions right out of 16. Feedback for wrong answers given below
-    
-        // Question: What is the 'median' of the following group of numbers 5, 21, 7, 18, 9?
-        // Your answer: A with value 7
-        // Right answer: B with value 9
-        // Hint: You must first arrange the numbers in ascending order. The median is the middle term, which in this case is 9
     }
     catch (error) {
         throw new Error("An error was encountered (feedbackReport)");
