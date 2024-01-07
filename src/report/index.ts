@@ -16,7 +16,7 @@ const urlPath = `http://localhost:${process.env.JSON_SERVER_PORT}/data`;
  * @returns {Promise<TStudent | null>}
  */
 export async function findStudent(studentId: string): Promise<TStudent | undefined> {
-    console.log("studentId:",studentId);
+    // console.log("studentId:",studentId);
     const response = await fetch(urlPath + "/students.json");
     if (!response.ok) throw new Error(`Encountered error while fetching student with id: ${studentId}`);
     const result: TStudent[] = await response.json();
